@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Fredoka", sans-serif;
+    background: linear-gradient(
+        #aee7ff,
+        #e8f8ff
+    );
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+#caixa {
+    position: relative;
+    width: 700px;
+    height: 500px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    animation: aparecer 1s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#titulo {
+    color: rgb(252, 110, 181);
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+#texto {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+#peppa {
+    width: 150px;
+    display: block;
+    margin-bottom: 20px;
+    animation: pular 2s ease-in-out infinite;
+}
+
+#nuvem {
+    position: absolute;
+    width: 100px;
+    top: 25px;
+    left: 40px;
+    animation: nuvem 5s ease-in-out infinite;
+}
+
+button {
+    font-family: "Fredoka", sans-serif;
+    border: none;
+    padding: 12px 20px;
+    margin: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#botao {
+    background-color: #ff8fbf;
+    color: white;
+}
+
+#botao:hover {
+    transform: scale(1.08);
+}
+
+#tema {
+    background-color: #555;
+    color: white;
+}
+
+#tema:hover {
+    transform: scale(1.08);
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pular {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes nuvem {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(30px);
+    }
+}
+
+body.escuro {
+    background: #222;
+}
+
+body.escuro #caixa {
+    background-color: #333;
+} 
+
+body.escuro #titulo {
+    color: #ff8fbf;
+}
+
+body.escuro #texto {
+    color: white;
+}
+
+
